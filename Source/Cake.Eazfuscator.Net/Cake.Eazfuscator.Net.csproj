@@ -13,7 +13,7 @@
 	<PackageTags>Cake Script Build Eazfuscator.Net</PackageTags>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net46</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
   </PropertyGroup>
   <PropertyGroup>
     <CodeAnalysisRuleSet>.\Cake.Eazfuscator.Net.ruleset</CodeAnalysisRuleSet>
@@ -26,19 +26,11 @@
     <DocumentationFile>bin\Release\netstandard2.0\Cake.Eazfuscator.Net.xml</DocumentationFile>
 	<DebugType>pdbonly</DebugType>
   </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
-    <DocumentationFile>bin\Debug\net46\Cake.Eazfuscator.Net.xml</DocumentationFile>
-	<DebugType>pdbonly</DebugType>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net46|AnyCPU'">
-    <DocumentationFile>bin\Release\net46\Cake.Eazfuscator.Net.xml</DocumentationFile>
-	<DebugType>pdbonly</DebugType>
-  </PropertyGroup>
   <ItemGroup>
     <AdditionalFiles Include="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Cake.Core" Version="0.26.1" />
+    <PackageReference Include="Cake.Core" Version="0.28.0" PrivateAssets="All" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" PrivateAssets="All" />
   </ItemGroup>
 </Project>
