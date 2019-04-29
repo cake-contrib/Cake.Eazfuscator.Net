@@ -1,16 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	<PackageId>Cake.Eazfuscator.Net</PackageId>
-	<Title>Cake.Eazfuscator.Net</Title>
-	<PackageVersion>$(VersionSuffix)</PackageVersion>
-	<Authors>gep13</Authors>
-	<PackageLicenseUrl>https://github.com/cake-contrib/Cake.Eazfuscator.Net/blob/master/LICENSE</PackageLicenseUrl>
-	<PackageProjectUrl>https://github.com/cake-contrib/Cake.Eazfuscator.Net</PackageProjectUrl>
-	<PackageIconUrl>https://raw.githubusercontent.com/cake-contrib/graphics/a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png</PackageIconUrl>
-	<Description>Cake addin that extends Cake with ability to use Eazfuscator.Net.</Description>
-	<Copyright>Copyright (c) Cake Contributions 2018 - Present</Copyright>
-	<PackageReleaseNotes>See GitHub for release notes.</PackageReleaseNotes>
-	<PackageTags>Cake Script Build Eazfuscator.Net</PackageTags>
+    <PackageId>Cake.Eazfuscator.Net</PackageId>
+    <Title>Cake.Eazfuscator.Net</Title>
+    <PackageVersion>$(VersionSuffix)</PackageVersion>
+    <Authors>gep13</Authors>
+    <PackageLicenseUrl>https://github.com/cake-contrib/Cake.Eazfuscator.Net/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/cake-contrib/Cake.Eazfuscator.Net</PackageProjectUrl>
+    <PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</PackageIconUrl>
+    <Description>Cake addin that extends Cake with ability to use Eazfuscator.Net.</Description>
+    <Copyright>Copyright (c) Cake Contributions 2018 - Present</Copyright>
+    <PackageReleaseNotes>See GitHub for release notes.</PackageReleaseNotes>
+    <PackageTags>Cake Script Build Eazfuscator.Net</PackageTags>
   </PropertyGroup>
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
@@ -20,11 +20,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
     <DocumentationFile>bin\Debug\netstandard2.0\Cake.Eazfuscator.Net.xml</DocumentationFile>
-	<DebugType>pdbonly</DebugType>
+    <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
     <DocumentationFile>bin\Release\netstandard2.0\Cake.Eazfuscator.Net.xml</DocumentationFile>
-	<DebugType>pdbonly</DebugType>
+    <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
     <AdditionalFiles Include="stylecop.json" />
