@@ -7,4 +7,4 @@ build_script:
 - ps: .\build.ps1 -Target AppVeyor
 
 cache:
-  - 'tools -> tools/packages.config,setup.cake'
+  - 'tools -> tools/packages.config,recipe.cake'
