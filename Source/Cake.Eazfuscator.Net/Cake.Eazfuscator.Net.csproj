@@ -4,10 +4,12 @@
 	<Title>Cake.Eazfuscator.Net</Title>
 	<PackageVersion>$(VersionSuffix)</PackageVersion>
 	<Authors>gep13</Authors>
-	<PackageLicenseUrl>https://github.com/cake-contrib/Cake.Eazfuscator.Net/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageProjectUrl>https://github.com/cake-contrib/Cake.Eazfuscator.Net</PackageProjectUrl>
 	<PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</PackageIconUrl>
 	<Description>Cake addin that extends Cake with ability to use Eazfuscator.Net.</Description>
+    <RepositoryUrl>https://github.com/cake-contrib/Cake.Eazfuscator.Net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
 	<Copyright>Copyright (c) Cake Contributions 2018 - Present</Copyright>
 	<PackageReleaseNotes>See GitHub for release notes.</PackageReleaseNotes>
 	<PackageTags>Cake Script Build Eazfuscator.Net</PackageTags>
