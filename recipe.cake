@@ -13,7 +13,8 @@ BuildParameters.SetParameters(context: Context,
                               shouldBuildNugetSourcePackage: false,
                               shouldExecuteGitLink: true,
                               shouldGenerateDocumentation: false,
-                              shouldRunCodecov: false);
+                              shouldRunCodecov: false,
+                              shouldRunGitVersion: true);
 
 BuildParameters.PrintParameters(Context);
 
