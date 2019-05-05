@@ -6,7 +6,7 @@
 	<Authors>gep13</Authors>
 	<PackageLicenseUrl>https://github.com/cake-contrib/Cake.Eazfuscator.Net/blob/master/LICENSE</PackageLicenseUrl>
 	<PackageProjectUrl>https://github.com/cake-contrib/Cake.Eazfuscator.Net</PackageProjectUrl>
-	<PackageIconUrl>https://raw.githubusercontent.com/cake-contrib/graphics/a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png</PackageIconUrl>
+	<PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</PackageIconUrl>
 	<Description>Cake addin that extends Cake with ability to use Eazfuscator.Net.</Description>
 	<Copyright>Copyright (c) Cake Contributions 2018 - Present</Copyright>
 	<PackageReleaseNotes>See GitHub for release notes.</PackageReleaseNotes>
@@ -30,7 +30,7 @@
     <AdditionalFiles Include="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Cake.Core" Version="0.28.0" PrivateAssets="All" />
+    <PackageReference Include="Cake.Core" Version="0.33.0" PrivateAssets="All" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" PrivateAssets="All" />
   </ItemGroup>
 </Project>
