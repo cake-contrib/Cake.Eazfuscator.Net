@@ -5,18 +5,12 @@ using Cake.Core.Tooling;
 namespace Cake.Eazfuscator.Net
 {
     /// <summary>
-    /// Contains settings used by <see cref="EazfuscatorNetRunner"/>. See <see
-    /// href="https://help.gapotchenko.com/eazfuscator.net/45/deployment/command-line-interface">Comman Line Interface</see>
-    /// or run
-    /// <code>
-    /// .\Eazfuscator.Net.exe --help
-    /// </code>
-    /// for more details.
+    /// Contains settings used by <see cref="EazfuscatorNetRunner"/>. See the <see href="https://help.gapotchenko.com/eazfuscator.net/45/deployment/command-line-interface">command-line interface documentation</see> or run <c>.\Eazfuscator.Net.exe --help</c> for more details.
     /// </summary>
     public sealed class EazfuscatorNetSettings : ToolSettings
     {
         /// <summary>
-        /// Gets or sets a property specifing whether or not to suppress logo message.
+        /// Gets or sets a value indicating whether to suppress the logo message.
         /// </summary>
         public bool NoLogo { get; set; }
 
@@ -85,7 +79,7 @@ namespace Cake.Eazfuscator.Net
         public string? ErrorSandbox { get; set; }
 
         /// <summary>
-        /// Gets or sets a value specifing whether to check the input file and ensure it is obfuscated.
+        /// Gets or sets a value indicating whether to check the input file and ensure it is obfuscated.
         /// </summary>
         public bool EnsureObfuscated { get; set; }
 
@@ -137,12 +131,12 @@ namespace Cake.Eazfuscator.Net
         public string? CompatibilityVersion { get; set; }
 
         /// <summary>
-        /// Gets or sets a value specifing whether to check installed version.
+        /// Gets or sets a value indicating whether to check the installed version.
         /// </summary>
         /// <remarks>
         /// <para>
         /// Instructs to check the installed version of Eazfuscator.NET and return the result as exit code. This
-        /// option cannot be combined with other options. (To get more help, please try to use it)
+        /// option cannot be combined with other options. (To get more help, please try to use it.)
         /// </para>
         /// </remarks>
         public bool CheckVersion { get; set; }
