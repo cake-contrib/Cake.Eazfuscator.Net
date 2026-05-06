@@ -9,6 +9,6 @@
     <Reference Include="Cake.Eazfuscator.Net">
       <HintPath>$(MSBuildProjectDirectory)\..\..\..\BuildArtifacts\temp\_PublishedLibraries\Cake.Eazfuscator.Net\net6.0\Cake.Eazfuscator.Net.dll</HintPath>
     </Reference>
-    <PackageReference Include="Cake.Frosting" Version="2.3.0" />
+    <PackageReference Include="Cake.Frosting" Version="3.2.0" />
   </ItemGroup>
 </Project>
