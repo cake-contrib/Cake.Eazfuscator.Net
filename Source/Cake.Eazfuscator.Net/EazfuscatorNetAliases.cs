@@ -48,7 +48,7 @@ namespace Cake.Eazfuscator.Net
         /// Executes <see href="https://www.gapotchenko.com/eazfuscator.net">Eazfuscator.Net.exe</see> on single file using the specified settings.
         /// </summary>
         /// <param name="context">The context.</param>
-        /// <param name="inputFile">The file to be obfuscated</param>
+        /// <param name="inputFile">The file to be obfuscated.</param>
         /// <param name="settings">The settings.</param>
         [CakeMethodAlias]
         public static void EazfuscatorNet(this ICakeContext context, FilePath inputFile, EazfuscatorNetSettings settings)
@@ -60,7 +60,7 @@ namespace Cake.Eazfuscator.Net
         /// Executes <see href="https://www.gapotchenko.com/eazfuscator.net">Eazfuscator.Net.exe</see> on selection of files using the specified settings.
         /// </summary>
         /// <param name="context">The context.</param>
-        /// <param name="inputFiles">The files to be obfuscated</param>
+        /// <param name="inputFiles">The files to be obfuscated.</param>
         /// <param name="settings">The settings.</param>
         [CakeMethodAlias]
         public static void EazfuscatorNet(this ICakeContext context, IEnumerable<FilePath> inputFiles, EazfuscatorNetSettings settings)
