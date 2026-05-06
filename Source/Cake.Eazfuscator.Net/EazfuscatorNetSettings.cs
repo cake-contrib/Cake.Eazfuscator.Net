@@ -29,7 +29,7 @@ namespace Cake.Eazfuscator.Net
         /// specified when multiple input files are given.
         /// </para>
         /// </remarks>
-        public FilePath OutputFile { get; set; }
+        public FilePath? OutputFile { get; set; }
 
         /// <summary>
         /// Gets or sets a property specifing the key file to use during obfuscation.
@@ -42,7 +42,7 @@ namespace Cake.Eazfuscator.Net
         /// assemblies without strong name are not affected.
         /// </para>
         /// </remarks>
-        public FilePath KeyFile { get; set; }
+        public FilePath? KeyFile { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether to use a key from key container during obfuscation.
@@ -53,7 +53,7 @@ namespace Cake.Eazfuscator.Net
         /// This option cannot be used with 'key-file' option.
         /// </para>
         /// </remarks>
-        public string KeyContainer { get; set; }
+        public string? KeyContainer { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether to print any information and diagnostic messages.
@@ -70,7 +70,7 @@ namespace Cake.Eazfuscator.Net
         /// standard output stream.
         /// </para>
         /// </remarks>
-        public string DecodeStackTraceWithPassword { get; set; }
+        public string? DecodeStackTraceWithPassword { get; set; }
 
         /// <summary>
         /// Gets or sets a value specifing the error sanddox to be used.
@@ -82,7 +82,7 @@ namespace Cake.Eazfuscator.Net
         /// out with default unexpected error window.
         /// </para>
         /// </remarks>
-        public string ErrorSandbox { get; set; }
+        public string? ErrorSandbox { get; set; }
 
         /// <summary>
         /// Gets or sets a value specifing whether to check the input file and ensure it is obfuscated.
@@ -92,22 +92,22 @@ namespace Cake.Eazfuscator.Net
         /// <summary>
         /// Gets or sets a value specifing the path to an MSBuild Project.
         /// </summary>
-        public FilePath MSBuildProjectPath { get; set; }
+        public FilePath? MSBuildProjectPath { get; set; }
 
         /// <summary>
         /// Gets or sets a value specifying the MSBuild Project Configuration name.
         /// </summary>
-        public string MSBuildProjectConfiguration { get; set; }
+        public string? MSBuildProjectConfiguration { get; set; }
 
         /// <summary>
         /// Gets or sets a value specifing the MSBuild Project Platform.
         /// </summary>
-        public string MSBuildProjectPlatform { get; set; }
+        public string? MSBuildProjectPlatform { get; set; }
 
         /// <summary>
         /// Gets or sets a value specifying the path to an MSBuild Solution.
         /// </summary>
-        public FilePath MSBuildSolutionPath { get; set; }
+        public FilePath? MSBuildSolutionPath { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether to protect project.
@@ -134,7 +134,7 @@ namespace Cake.Eazfuscator.Net
         /// Gets or sets a value specifing a version of Eazfuscator.NET to be compatible with.
         /// </summary>
         /// <value>A value specifing the git tag.</value>
-        public string CompatibilityVersion { get; set; }
+        public string? CompatibilityVersion { get; set; }
 
         /// <summary>
         /// Gets or sets a value specifing whether to check installed version.
@@ -150,7 +150,7 @@ namespace Cake.Eazfuscator.Net
         /// <summary>
         /// Gets or sets a value specifing the probing paths.
         /// </summary>
-        public IEnumerable<DirectoryPath> ProbingPaths { get; set; }
+        public IEnumerable<DirectoryPath>? ProbingPaths { get; set; }
 
         /// <summary>
         /// Gets or sets a value specifiying a list of warnings to treat as errors.
@@ -161,7 +161,7 @@ namespace Cake.Eazfuscator.Net
         /// To treat all warning as errors please put an argument 'all' to this option.
         /// </para>
         /// </remarks>
-        public string WarningsAsErrors { get; set; }
+        public string? WarningsAsErrors { get; set; }
 
         /// <summary>
         /// Gets or sets a value specifying a configuration file to use during obfuscation.
@@ -172,7 +172,7 @@ namespace Cake.Eazfuscator.Net
         /// documentation for configuration syntax.
         /// </para>
         /// </remarks>
-        public FilePath ConfigurationFile { get; set; }
+        public FilePath? ConfigurationFile { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether or not to produce obfuscation statistics report.

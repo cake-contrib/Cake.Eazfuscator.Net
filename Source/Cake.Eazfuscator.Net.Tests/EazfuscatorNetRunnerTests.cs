@@ -52,7 +52,7 @@ namespace Cake.Eazfuscator.Net.Tests
             result.Path.FullPath.Should().Be(expected);
         }
 
-        [Theory]
+        [WindowsTheory]
         [InlineData("C:/EazfuscatorNet/Eazfuscator.Net.exe", "C:/EazfuscatorNet/Eazfuscator.Net.exe")]
         public void Should_Use_EazfuscatorNet_Runner_From_Tool_Path_If_Provided_On_Windows(string toolPath, string expected)
         {
