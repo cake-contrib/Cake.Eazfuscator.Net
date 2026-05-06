@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -8,16 +8,31 @@ using Cake.Core.Tooling;
 
 namespace Cake.Eazfuscator.Net
 {
+    /// <summary>
+    /// The Eazfuscator.NET runner.
+    /// </summary>
     internal sealed class EazfuscatorNetRunner : Tool<EazfuscatorNetSettings>
     {
-        private readonly ICakeEnvironment _environment;
+        private readonly ICakeEnvironment environment;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EazfuscatorNetRunner"/> class.
+        /// </summary>
+        /// <param name="fileSystem">The file system.</param>
+        /// <param name="environment">The environment.</param>
+        /// <param name="processRunner">The process runner.</param>
+        /// <param name="tools">The tool locator.</param>
         internal EazfuscatorNetRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator tools)
             : base(fileSystem, environment, processRunner, tools)
         {
-            _environment = environment;
+            this.environment = environment;
         }
 
+        /// <summary>
+        /// Invokes Eazfuscator.Net.exe on the specified input files using the supplied settings.
+        /// </summary>
+        /// <param name="inputFiles">The files to be obfuscated.</param>
+        /// <param name="settings">The settings.</param>
         internal void Run(IEnumerable<FilePath> inputFiles, EazfuscatorNetSettings settings)
         {
             ArgumentNullException.ThrowIfNull(inputFiles);
@@ -26,8 +41,16 @@ namespace Cake.Eazfuscator.Net
             Run(settings, GetArguments(inputFiles, settings));
         }
 
+        /// <summary>
+        /// Gets the name of the tool.
+        /// </summary>
+        /// <returns>The name of the tool.</returns>
         protected override string GetToolName() => "Eazfuscator.Net";
 
+        /// <summary>
+        /// Gets the name of the tool executable.
+        /// </summary>
+        /// <returns>The tool executable name.</returns>
         protected override IEnumerable<string> GetToolExecutableNames()
         {
             yield return "Eazfuscator.Net.exe";
@@ -39,7 +62,7 @@ namespace Cake.Eazfuscator.Net
 
             foreach (var inputFile in inputFiles)
             {
-                builder.AppendQuoted(inputFile.MakeAbsolute(_environment).FullPath);
+                builder.AppendQuoted(inputFile.MakeAbsolute(environment).FullPath);
             }
 
             if (settings.NoLogo)
@@ -50,13 +73,13 @@ namespace Cake.Eazfuscator.Net
             if (settings.OutputFile != null)
             {
                 builder.Append("--output");
-                builder.AppendQuoted(settings.OutputFile.MakeAbsolute(_environment).FullPath);
+                builder.AppendQuoted(settings.OutputFile.MakeAbsolute(environment).FullPath);
             }
 
             if (settings.KeyFile != null)
             {
                 builder.Append("--key-file");
-                builder.AppendQuoted(settings.KeyFile.MakeAbsolute(_environment).FullPath);
+                builder.AppendQuoted(settings.KeyFile.MakeAbsolute(environment).FullPath);
             }
 
             if (!string.IsNullOrWhiteSpace(settings.KeyContainer))
@@ -90,7 +113,7 @@ namespace Cake.Eazfuscator.Net
             if (settings.MSBuildProjectPath != null)
             {
                 builder.Append("--msbuild-project-path");
-                builder.AppendQuoted(settings.MSBuildProjectPath.MakeAbsolute(_environment).FullPath);
+                builder.AppendQuoted(settings.MSBuildProjectPath.MakeAbsolute(environment).FullPath);
             }
 
             if (!string.IsNullOrWhiteSpace(settings.MSBuildProjectConfiguration))
@@ -108,7 +131,7 @@ namespace Cake.Eazfuscator.Net
             if (settings.MSBuildSolutionPath != null)
             {
                 builder.Append("--msbuild-solution-path");
-                builder.AppendQuoted(settings.MSBuildSolutionPath.MakeAbsolute(_environment).FullPath);
+                builder.AppendQuoted(settings.MSBuildSolutionPath.MakeAbsolute(environment).FullPath);
             }
 
             if (settings.ProtectProject)
@@ -139,7 +162,7 @@ namespace Cake.Eazfuscator.Net
 
                 foreach (var probingPath in settings.ProbingPaths)
                 {
-                    fullPathsStringArray.Add(probingPath.MakeAbsolute(_environment).FullPath);
+                    fullPathsStringArray.Add(probingPath.MakeAbsolute(environment).FullPath);
                 }
 
                 var probingPathsString = string.Join(";", fullPathsStringArray);
@@ -155,7 +178,7 @@ namespace Cake.Eazfuscator.Net
             if (settings.ConfigurationFile != null)
             {
                 builder.Append("--configuration-file");
-                builder.AppendQuoted(settings.ConfigurationFile.MakeAbsolute(_environment).FullPath);
+                builder.AppendQuoted(settings.ConfigurationFile.MakeAbsolute(environment).FullPath);
             }
 
             if (settings.Statistics)
