@@ -1,4 +1,4 @@
-#reference "../../BuildArtifacts/temp/_PublishedLibraries/Cake.Eazfuscator.Net/net6.0/Cake.Eazfuscator.Net.dll"
+#reference "../../BuildArtifacts/temp/_PublishedLibraries/Cake.Eazfuscator.Net/net8.0/Cake.Eazfuscator.Net.dll"
 
 using Cake.Eazfuscator.Net;
 
