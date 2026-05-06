@@ -20,15 +20,8 @@ namespace Cake.Eazfuscator.Net
 
         internal void Run(IEnumerable<FilePath> inputFiles, EazfuscatorNetSettings settings)
         {
-            if (inputFiles == null)
-            {
-                throw new ArgumentNullException(nameof(inputFiles));
-            }
-
-            if (settings == null)
-            {
-                throw new ArgumentNullException(nameof(settings));
-            }
+            ArgumentNullException.ThrowIfNull(inputFiles);
+            ArgumentNullException.ThrowIfNull(settings);
 
             Run(settings, GetArguments(inputFiles, settings));
         }
